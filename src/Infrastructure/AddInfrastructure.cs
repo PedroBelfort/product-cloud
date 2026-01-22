@@ -12,7 +12,7 @@ namespace Infrastructure
 
         public static IServiceCollection AddInfrastructureDI(this IServiceCollection services, IConfiguration configuration)
         {
-            services.AddDbContext<ProductContext>(options => options.UseSqlServer(configuration.GetConnectionString("DefaultConnection")));
+            services.AddDbContext<ProductContext>(options => options.UseNpgsql(configuration.GetConnectionString("DefaultConnection")));
             services.AddScoped<IProductRepository, ProductRepository>();
 
             return services;

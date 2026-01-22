@@ -1,22 +1,12 @@
 version: "3.9"
 
 services:
-  sqlserver:
-    image: mcr.microsoft.com/mssql/server:2022-latest
-    environment:
-      - ACCEPT_EULA=Y
-      - SA_PASSWORD=Your_password123
-    ports:
-      - "1433:1433"
-
   products-api:
     build:
       context: .
       dockerfile: Dockerfile
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
-      - ConnectionStrings__DefaultConnection=Server=sqlserver,1433;Database=ProductsDb;User Id=sa;Password=Your_password123;TrustServerCertificate=True
-    depends_on:
-      - sqlserver
+      - ConnectionStrings__DefaultConnection=Host=ep-proud-dew-agof5ldc-pooler.c-2.eu-central-1.aws.neon.tech;Database=ProductsDb;Username=neondb_owner;Password=npg_Xms7IrJFYp8j;SSLMode=VerifyFull;ChannelBinding=Require
     ports:
       - "8080:8080"
