@@ -37,8 +37,9 @@ jobs:
 
       - name: Tag and push latest
         run: |
-          FULL_IMAGE="${REGISTRY}/${{ github.repository_lowercase }}/${IMAGE_NAME}:latest"
-          docker tag "${REGISTRY}/${{ github.repository_lowercase }}/${IMAGE_NAME}:${TAG}" "$FULL_IMAGE"
+          FULL_IMAGE="ghcr.io/PedroBelfort/product-cloud/${IMAGE_NAME}:latest"
+          SHA_IMAGE="ghcr.io/PedroBelfort/product-cloud/${IMAGE_NAME}:${TAG}"
+          docker tag "$SHA_IMAGE" "$FULL_IMAGE"
           docker push "$FULL_IMAGE"
 
   CD:
