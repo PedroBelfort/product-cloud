@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "983q77YUPCs=",
+  "dgSpecHash": "guUU8fNK6+g=",
   "success": true,
-  "projectFilePath": "C:\\Dev\\product-docker\\src\\Application\\Application.csproj",
+  "projectFilePath": "C:\\Dev\\product-cloud\\src\\Application\\Application.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\pedro\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\9.0.12\\microsoft.extensions.configuration.abstractions.9.0.12.nupkg.sha512",
     "C:\\Users\\pedro\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\9.0.12\\microsoft.extensions.dependencyinjection.abstractions.9.0.12.nupkg.sha512",

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Dev\\product-docker\\src\\Infrastructure\\Infrastructure.csproj": {}
+    "C:\\Dev\\product-cloud\\src\\Infrastructure\\Infrastructure.csproj": {}
   },
   "projects": {
-    "C:\\Dev\\product-docker\\src\\Domain\\Domain.csproj": {
+    "C:\\Dev\\product-cloud\\src\\Domain\\Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Dev\\product-docker\\src\\Domain\\Domain.csproj",
+        "projectUniqueName": "C:\\Dev\\product-cloud\\src\\Domain\\Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "C:\\Dev\\product-docker\\src\\Domain\\Domain.csproj",
+        "projectPath": "C:\\Dev\\product-cloud\\src\\Domain\\Domain.csproj",
         "packagesPath": "C:\\Users\\pedro\\.nuget\\packages\\",
-        "outputPath": "C:\\Dev\\product-docker\\src\\Domain\\obj\\",
+        "outputPath": "C:\\Dev\\product-cloud\\src\\Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -69,14 +69,14 @@
         }
       }
     },
-    "C:\\Dev\\product-docker\\src\\Infrastructure\\Infrastructure.csproj": {
+    "C:\\Dev\\product-cloud\\src\\Infrastructure\\Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Dev\\product-docker\\src\\Infrastructure\\Infrastructure.csproj",
+        "projectUniqueName": "C:\\Dev\\product-cloud\\src\\Infrastructure\\Infrastructure.csproj",
         "projectName": "Infrastructure",
-        "projectPath": "C:\\Dev\\product-docker\\src\\Infrastructure\\Infrastructure.csproj",
+        "projectPath": "C:\\Dev\\product-cloud\\src\\Infrastructure\\Infrastructure.csproj",
         "packagesPath": "C:\\Users\\pedro\\.nuget\\packages\\",
-        "outputPath": "C:\\Dev\\product-docker\\src\\Infrastructure\\obj\\",
+        "outputPath": "C:\\Dev\\product-cloud\\src\\Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -97,8 +97,8 @@
           "net9.0": {
             "targetAlias": "net9.0",
             "projectReferences": {
-              "C:\\Dev\\product-docker\\src\\Domain\\Domain.csproj": {
-                "projectPath": "C:\\Dev\\product-docker\\src\\Domain\\Domain.csproj"
+              "C:\\Dev\\product-cloud\\src\\Domain\\Domain.csproj": {
+                "projectPath": "C:\\Dev\\product-cloud\\src\\Domain\\Domain.csproj"
               }
             }
           }
@@ -138,6 +138,10 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[9.0.12, )"
+            },
+            "Npgsql.EntityFrameworkCore.PostgreSQL": {
+              "target": "Package",
+              "version": "[9.0.4, )"
             }
           },
           "imports": [

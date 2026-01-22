@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Dev\\product-docker\\src\\Domain\\Domain.csproj",
+      "projectUniqueName": "C:\\Dev\\product-cloud\\src\\Domain\\Domain.csproj",
       "projectName": "Domain",
-      "projectPath": "C:\\Dev\\product-docker\\src\\Domain\\Domain.csproj",
+      "projectPath": "C:\\Dev\\product-cloud\\src\\Domain\\Domain.csproj",
       "packagesPath": "C:\\Users\\pedro\\.nuget\\packages\\",
-      "outputPath": "C:\\Dev\\product-docker\\src\\Domain\\obj\\",
+      "outputPath": "C:\\Dev\\product-cloud\\src\\Domain\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
