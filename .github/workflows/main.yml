@@ -37,8 +37,8 @@ jobs:
 
       - name: Tag and push latest
         run: |
-          FULL_IMAGE="ghcr.io/PedroBelfort/product-cloud/${IMAGE_NAME}:latest"
-          SHA_IMAGE="ghcr.io/PedroBelfort/product-cloud/${IMAGE_NAME}:${TAG}"
+          FULL_IMAGE="ghcr.io/pedrobelfort/product-cloud/${IMAGE_NAME}:latest"
+          SHA_IMAGE="ghcr.io/pedrobelfort/product-cloud/${IMAGE_NAME}:${TAG}"
           docker tag "$SHA_IMAGE" "$FULL_IMAGE"
           docker push "$FULL_IMAGE"
 
