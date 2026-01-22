@@ -9,7 +9,7 @@ services:
     ports:
       - "1433:1433"
 
-  api:
+  products-api:
     build:
       context: .
       dockerfile: Dockerfile
