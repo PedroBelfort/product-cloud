@@ -1,0 +1,17 @@
+C:\Dev\product-docker\src\Infrastructure\obj\Debug\net9.0\Infrastructure.csproj.AssemblyReference.cache
+C:\Dev\product-docker\src\Infrastructure\obj\Debug\net9.0\Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Dev\product-docker\src\Infrastructure\obj\Debug\net9.0\Infrastructure.AssemblyInfoInputs.cache
+C:\Dev\product-docker\src\Infrastructure\obj\Debug\net9.0\Infrastructure.AssemblyInfo.cs
+C:\Dev\product-docker\src\Infrastructure\obj\Debug\net9.0\Infrastructure.csproj.CoreCompileInputs.cache
+C:\Dev\product-docker\src\Infrastructure\bin\Debug\net9.0\Infrastructure.deps.json
+C:\Dev\product-docker\src\Infrastructure\bin\Debug\net9.0\Infrastructure.runtimeconfig.json
+C:\Dev\product-docker\src\Infrastructure\bin\Debug\net9.0\Infrastructure.dll
+C:\Dev\product-docker\src\Infrastructure\bin\Debug\net9.0\Infrastructure.pdb
+C:\Dev\product-docker\src\Infrastructure\bin\Debug\net9.0\Domain.dll
+C:\Dev\product-docker\src\Infrastructure\bin\Debug\net9.0\Domain.pdb
+C:\Dev\product-docker\src\Infrastructure\obj\Debug\net9.0\Infrastr.15EFFBFE.Up2Date
+C:\Dev\product-docker\src\Infrastructure\obj\Debug\net9.0\Infrastructure.dll
+C:\Dev\product-docker\src\Infrastructure\obj\Debug\net9.0\refint\Infrastructure.dll
+C:\Dev\product-docker\src\Infrastructure\obj\Debug\net9.0\Infrastructure.pdb
+C:\Dev\product-docker\src\Infrastructure\obj\Debug\net9.0\Infrastructure.genruntimeconfig.cache
+C:\Dev\product-docker\src\Infrastructure\obj\Debug\net9.0\ref\Infrastructure.dll

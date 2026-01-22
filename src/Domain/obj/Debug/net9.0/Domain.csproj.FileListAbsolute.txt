@@ -1,0 +1,11 @@
+C:\Dev\product-docker\src\Domain\bin\Debug\net9.0\Domain.deps.json
+C:\Dev\product-docker\src\Domain\bin\Debug\net9.0\Domain.dll
+C:\Dev\product-docker\src\Domain\bin\Debug\net9.0\Domain.pdb
+C:\Dev\product-docker\src\Domain\obj\Debug\net9.0\Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Dev\product-docker\src\Domain\obj\Debug\net9.0\Domain.AssemblyInfoInputs.cache
+C:\Dev\product-docker\src\Domain\obj\Debug\net9.0\Domain.AssemblyInfo.cs
+C:\Dev\product-docker\src\Domain\obj\Debug\net9.0\Domain.csproj.CoreCompileInputs.cache
+C:\Dev\product-docker\src\Domain\obj\Debug\net9.0\Domain.dll
+C:\Dev\product-docker\src\Domain\obj\Debug\net9.0\refint\Domain.dll
+C:\Dev\product-docker\src\Domain\obj\Debug\net9.0\Domain.pdb
+C:\Dev\product-docker\src\Domain\obj\Debug\net9.0\ref\Domain.dll
