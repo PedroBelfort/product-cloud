@@ -1,7 +1,7 @@
 version: "3.9"
-
 services:
   products-api:
+    image: ghcr.io/pedrobelfort/product-cloud/products-api:${TAG:-latest}
     build:
       context: .
       dockerfile: Dockerfile
@@ -9,4 +9,4 @@ services:
       - ASPNETCORE_ENVIRONMENT=Development
       - ConnectionStrings__DefaultConnection=Host=ep-proud-dew-agof5ldc-pooler.c-2.eu-central-1.aws.neon.tech;Database=ProductsDb;Username=neondb_owner;Password=npg_Xms7IrJFYp8j;SSLMode=VerifyFull;ChannelBinding=Require
     ports:
-      - "8080:8080"
+      - "8080:80"  # ← Azure mapeia 80/443 externamente
