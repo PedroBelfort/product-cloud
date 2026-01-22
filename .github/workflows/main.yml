@@ -42,6 +42,9 @@ jobs:
           docker tag "$SHA_IMAGE" "$FULL_IMAGE"
           docker push "$FULL_IMAGE"
 
+      - name: Push images to GHCR
+        run: docker compose -f docker-compose.yml push
+
   CD:
     needs: CI  # ← Espera CI terminar
     runs-on: ubuntu-latest
