@@ -1,0 +1,70 @@
+name: Build and Push Docker Compose (.NET 9)
+
+on:
+  push:
+    branches:
+      - main
+
+env:
+  REGISTRY: ghcr.io
+  IMAGE_NAME: products-api
+  TAG: ${{ github.sha }}
+  AZURE_WEBAPP_NAME: product-cloud  # ← Ajusta com o nome real
+
+jobs:
+  CI:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Login to GitHub Container Registry
+        uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Build images with Docker Compose
+        run: docker compose -f docker-compose.prod.yml build
+
+      - name: Push images to GHCR
+        run: docker compose -f docker-compose.prod.yml push
+
+      - name: Tag and push latest
+        run: |
+          FULL_IMAGE="${REGISTRY}/${{ github.repository_lowercase }}/${IMAGE_NAME}:latest"
+          docker tag "${REGISTRY}/${{ github.repository_lowercase }}/${IMAGE_NAME}:${TAG}" "$FULL_IMAGE"
+          docker push "$FULL_IMAGE"
+
+  CD:
+    needs: CI  # ← Espera CI terminar
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      id-token: write  # ← Para Azure login
+    environment: production  # ← Opcional: aprovações
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Login to GHCR from CD
+        uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Deploy to Azure Web App
+        uses: azure/webapps-deploy@v3
+        with:
+          app-name: ${{ env.AZURE_WEBAPP_NAME }}
+          publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}
+          images: |
+            ghcr.io/PedroBelfort/product-cloud/products-api:${{ github.sha }}
+            ghcr.io/PedroBelfort/product-cloud/products-api:latest
