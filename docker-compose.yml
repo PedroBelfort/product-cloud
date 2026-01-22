@@ -1,5 +1,4 @@
 version: "3.9"
-
 services:
   sqlserver:
     image: mcr.microsoft.com/mssql/server:2022-latest
@@ -10,13 +9,14 @@ services:
       - "1433:1433"
 
   products-api:
+    image: ghcr.io/pedrobelfort/product-cloud/products-api:${TAG:-latest}
     build:
       context: .
       dockerfile: Dockerfile
     environment:
-      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_ENVIRONMENT=Production  # ← Production!
       - ConnectionStrings__DefaultConnection=Server=sqlserver,1433;Database=ProductsDb;User Id=sa;Password=Your_password123;TrustServerCertificate=True
     depends_on:
       - sqlserver
     ports:
-      - "8080:8080"
+      - "8080:80"  # ← Azure mapeia 80/443 externamente
